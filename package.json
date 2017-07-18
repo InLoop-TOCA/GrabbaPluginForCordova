@@ -1,0 +1,31 @@
+{
+  "name": "GrabbaPluginForCordova",
+  "version": "0.33.4",
+  "description": "Cordova Grabba Plugin",
+  "cordova": {
+    "id": "com.grabba.cordova.plugin",
+    "platforms": [
+      "android",
+      "ios",
+      "windows"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/InLoop-TOCA/GrabbaPluginForCordova.git"
+  },
+  "keywords": [
+    "cordova",
+    "grabba",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+    "cordova-windows"
+  ],
+  "author": "InLoop",
+  "license": "Grabba SDK Licence",
+  "bugs": {
+    "url": "https://github.com/InLoop-TOCA/GrabbaPluginForCordova/issues"
+  },
+  "homepage": "https://github.com/InLoop-TOCA/GrabbaPluginForCordova#readme"
+}
