@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Class: GrabbaBarcode</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Class: GrabbaBarcode</h1>
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>
+        GrabbaBarcode
+        </h2>
+        
+            <div class="class-description">Access this class via <b>grabba.barcode</b></div>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+    
+    <h2>Constructor</h2>
+    
+
+    <h4 class="name" id="GrabbaBarcode"><span class="type-signature"></span>new GrabbaBarcode<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Access Grabba barcode capabilities via <b>grabba.barcode</b>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        
+            
+<h4 class="name" id="preferences"><span class="type-signature"></span>preferences<span class="type-signature"> :<a href="GrabbaBarcodePreferences.html">GrabbaBarcodePreferences</a></span></h4>
+
+
+
+
+<div class="description">
+    Grabba barcode preference identifiers.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="GrabbaBarcodePreferences.html">GrabbaBarcodePreferences</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id="isSupported"><span class="type-signature"></span>isSupported<span class="signature">(onSuccess, onError)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Determines if the currently connected Grabba supports barcode functionality.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>onSuccess</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Called on success with the following parameters:<br>
+{boolean} Boolean indicating if GrabbaBarcode is supported.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>onError</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Called on error with the following parameters:<br>
+{String} error description.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>//Button to check if the connected Grabba supports barcode functionality.
+ &lt;button onclick="grabba.barcode.isSupported(function(supported){
+ alert('Grabba barcode supported is ' + supported);
+ },
+ function(errorString) {
+     alert('on error ' + errorString);
+ });">Is barcode supported?&lt;/button></code></pre>
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="registerCallback"><span class="type-signature"></span>registerCallback<span class="signature">(callback, onError)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Register callbacks for Barcode related events.<br>
+If no callbacks are passed to this function, all present callbacks will be cleared.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">An object which implements the following functions:<br>
+<b>triggeredEvent : function(){}</b><br>
+Called when the barcode scanner is triggered.<br><br>
+<b>timeoutEvent : function(){}</b><br>
+Called when the barcode scanner has timed out.<br><br>
+<b>stoppedEvent : function(){}</b><br>
+Called when the barcode scanner has stopped.<br><br>
+<b>scannedEvent : function(barcode){}</b><br>
+Called when a barcode is scanned.<br>
+The returned object contains properties as follows:<br>
+{String} barcode.data The scanned barcode data.<br>
+{String} barcode.symbology The scanned barcode's symbology.<br>
+{int} barcode.symbologyInt Integer representation of the barcode's symbology.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>onError</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Called on error with the following parameters:<br>
+{String} error description.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>//An example of an implemented barcode callback is as follows:
+ grabba.barcode.registerCallback(barcodeCallbacks, onError);
+ var barcodeTimeoutFunction = function () {
+     alert('Barcode timed out');
+ };
+ grabba.barcode.registerCallback(barcodeCallbacks, onError);
+ var barcodeTimeoutFunction = function() {
+     alert('Barcode timed out');
+ };
+ var barcodeCallbacks = {
+ //Functions may also be declared inline as seen here.
+ triggeredEvent: function() {
+     alert('Barcode triggered');
+ },
+ //These functions are optional and unimplemented functions will simply not be called.
+ //stoppedEvent : function () {
+ //alert('Barcode scanning stopped');
+ //},
+ scannedEvent: function(barcode) {
+ //barcode contains data fields
+     alert('Barcode scanned event\n Data: ' + barcode.data + '\n' + "Symbology: " + barcode.symbology);
+ },
+ //You may create a function separately as seen with barcodeTimeoutFunction here.
+     timeoutEvent: barcodeTimeoutFunction
+ };</code></pre>
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="trigger"><span class="type-signature"></span>trigger<span class="signature">(onError, enable)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Starts or stops barcode scanning.<br>
+To receive the barcode events and scanned data, first register for callbacks using <a href="GrabbaBarcode.html#registerCallback">GrabbaBarcode#registerCallback</a> and then call:<br>
+<code>
+grabba.barcode.trigger(onError, true)
+</code>
+<br>
+To start the barcode scanner and scan the barcode.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>onError</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Called on error with the following parameters:<br>
+{String} error description.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>enable</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Pass true to start scanning, false to stop.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="GrabbaBarcode.html#registerCallback">GrabbaBarcode#registerCallback</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>&lt;!--A button which starts the barcode scanning process-->
+&lt;button onclick="grabba.barcode.trigger(onError, true)">Trigger&lt;/button></code></pre>
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Grabba.html">Grabba</a></li><li><a href="GrabbaBarcode.html">GrabbaBarcode</a></li><li><a href="GrabbaBarcodePreferences.html">GrabbaBarcodePreferences</a></li><li><a href="GrabbaBarcodePreferencesImager.html">GrabbaBarcodePreferencesImager</a></li><li><a href="GrabbaBarcodePreferencesImagerShip.html">GrabbaBarcodePreferencesImagerShip</a></li><li><a href="GrabbaBarcodePreferencesImagerSnap.html">GrabbaBarcodePreferencesImagerSnap</a></li><li><a href="GrabbaBarcodeSymbology.html">GrabbaBarcodeSymbology</a></li><li><a href="GrabbaBarcodeSymbologyAusPost.html">GrabbaBarcodeSymbologyAusPost</a></li><li><a href="GrabbaBarcodeSymbologyAztec.html">GrabbaBarcodeSymbologyAztec</a></li><li><a href="GrabbaBarcodeSymbologyBC412.html">GrabbaBarcodeSymbologyBC412</a></li><li><a href="GrabbaBarcodeSymbologyBritish.html">GrabbaBarcodeSymbologyBritish</a></li><li><a href="GrabbaBarcodeSymbologyCanadian.html">GrabbaBarcodeSymbologyCanadian</a></li><li><a href="GrabbaBarcodeSymbologyChinaPostage.html">GrabbaBarcodeSymbologyChinaPostage</a></li><li><a href="GrabbaBarcodeSymbologyCodabar.html">GrabbaBarcodeSymbologyCodabar</a></li><li><a href="GrabbaBarcodeSymbologyCodablockA.html">GrabbaBarcodeSymbologyCodablockA</a></li><li><a href="GrabbaBarcodeSymbologyCodablockF.html">GrabbaBarcodeSymbologyCodablockF</a></li><li><a href="GrabbaBarcodeSymbologyCode11.html">GrabbaBarcodeSymbologyCode11</a></li><li><a href="GrabbaBarcodeSymbologyCode16k.html">GrabbaBarcodeSymbologyCode16k</a></li><li><a href="GrabbaBarcodeSymbologyCode26.html">GrabbaBarcodeSymbologyCode26</a></li><li><a href="GrabbaBarcodeSymbologyCode39.html">GrabbaBarcodeSymbologyCode39</a></li><li><a href="GrabbaBarcodeSymbologyCode49.html">GrabbaBarcodeSymbologyCode49</a></li><li><a href="GrabbaBarcodeSymbologyCode93.html">GrabbaBarcodeSymbologyCode93</a></li><li><a href="GrabbaBarcodeSymbologyCode128.html">GrabbaBarcodeSymbologyCode128</a></li><li><a href="GrabbaBarcodeSymbologyCodeOne.html">GrabbaBarcodeSymbologyCodeOne</a></li><li><a href="GrabbaBarcodeSymbologyCoupon.html">GrabbaBarcodeSymbologyCoupon</a></li><li><a href="GrabbaBarcodeSymbologyD25.html">GrabbaBarcodeSymbologyD25</a></li><li><a href="GrabbaBarcodeSymbologyDataMatrix.html">GrabbaBarcodeSymbologyDataMatrix</a></li><li><a href="GrabbaBarcodeSymbologyEAN8.html">GrabbaBarcodeSymbologyEAN8</a></li><li><a href="GrabbaBarcodeSymbologyEAN13.html">GrabbaBarcodeSymbologyEAN13</a></li><li><a href="GrabbaBarcodeSymbologyEANComposite.html">GrabbaBarcodeSymbologyEANComposite</a></li><li><a href="GrabbaBarcodeSymbologyIndustrial25.html">GrabbaBarcodeSymbologyIndustrial25</a></li><li><a href="GrabbaBarcodeSymbologyInterleaved25.html">GrabbaBarcodeSymbologyInterleaved25</a></li><li><a href="GrabbaBarcodeSymbologyJapanese.html">GrabbaBarcodeSymbologyJapanese</a></li><li><a href="GrabbaBarcodeSymbologyKorea.html">GrabbaBarcodeSymbologyKorea</a></li><li><a href="GrabbaBarcodeSymbologyMatrix25.html">GrabbaBarcodeSymbologyMatrix25</a></li><li><a href="GrabbaBarcodeSymbologyMaxicode.html">GrabbaBarcodeSymbologyMaxicode</a></li><li><a href="GrabbaBarcodeSymbologyMicroPDF417.html">GrabbaBarcodeSymbologyMicroPDF417</a></li><li><a href="GrabbaBarcodeSymbologyMSI.html">GrabbaBarcodeSymbologyMSI</a></li><li><a href="GrabbaBarcodeSymbologyNetherlands.html">GrabbaBarcodeSymbologyNetherlands</a></li><li><a href="GrabbaBarcodeSymbologyPDF417.html">GrabbaBarcodeSymbologyPDF417</a></li><li><a href="GrabbaBarcodeSymbologyPlanet.html">GrabbaBarcodeSymbologyPlanet</a></li><li><a href="GrabbaBarcodeSymbologyPlessey.html">GrabbaBarcodeSymbologyPlessey</a></li><li><a href="GrabbaBarcodeSymbologyPosi.html">GrabbaBarcodeSymbologyPosi</a></li><li><a href="GrabbaBarcodeSymbologyPostnet.html">GrabbaBarcodeSymbologyPostnet</a></li><li><a href="GrabbaBarcodeSymbologyQRCode.html">GrabbaBarcodeSymbologyQRCode</a></li><li><a href="GrabbaBarcodeSymbologyRSS14.html">GrabbaBarcodeSymbologyRSS14</a></li><li><a href="GrabbaBarcodeSymbologyRSS14Expanded.html">GrabbaBarcodeSymbologyRSS14Expanded</a></li><li><a href="GrabbaBarcodeSymbologyRSS14Limited.html">GrabbaBarcodeSymbologyRSS14Limited</a></li><li><a href="GrabbaBarcodeSymbologyTelepen.html">GrabbaBarcodeSymbologyTelepen</a></li><li><a href="GrabbaBarcodeSymbologyTLC.html">GrabbaBarcodeSymbologyTLC</a></li><li><a href="GrabbaBarcodeSymbologyTrioptic.html">GrabbaBarcodeSymbologyTrioptic</a></li><li><a href="GrabbaBarcodeSymbologyUPCA.html">GrabbaBarcodeSymbologyUPCA</a></li><li><a href="GrabbaBarcodeSymbologyUPCE.html">GrabbaBarcodeSymbologyUPCE</a></li><li><a href="GrabbaBerTlv.html">GrabbaBerTlv</a></li><li><a href="GrabbaFingerprint.html">GrabbaFingerprint</a></li><li><a href="GrabbaFingerprintPreferences.html">GrabbaFingerprintPreferences</a></li><li><a href="GrabbaMagstripe.html">GrabbaMagstripe</a></li><li><a href="GrabbaMagstripePreferences.html">GrabbaMagstripePreferences</a></li><li><a href="GrabbaMRTD.html">GrabbaMRTD</a></li><li><a href="GrabbaPassport.html">GrabbaPassport</a></li><li><a href="GrabbaPassportPreferences.html">GrabbaPassportPreferences</a></li><li><a href="GrabbaPreferences.html">GrabbaPreferences</a></li><li><a href="GrabbaProxcard.html">GrabbaProxcard</a></li><li><a href="GrabbaProxcardPreferences.html">GrabbaProxcardPreferences</a></li><li><a href="GrabbaUtil.html">GrabbaUtil</a></li></ul><h3>Global</h3><ul><li><a href="global.html#grabba">grabba</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.2</a> on Thu Jul 16 2015 14:30:21 GMT+1000 (AEST)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

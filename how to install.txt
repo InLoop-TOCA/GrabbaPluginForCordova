@@ -1,0 +1,5 @@
+Using the command line interface, call:
+	$ cordova plugin add
+
+Alternately, specify a local path to the folder that contains this file and the plugin.xml file:
+    $ cordova plugin add <path to this folder>
